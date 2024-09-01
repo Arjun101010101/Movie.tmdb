@@ -6,7 +6,7 @@ export const Card = ({ movie }) => {
   return (
     <div className="md:w-[50%] w-[100%]  flex flex-wrap md:flex-nowrap bg-white mb-2 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <Link to={`/movie/${id}`}>
-        <div className="md:w-[300px] w-full h-[100%]">
+        <div className="md:w-[300px] h-[100%]">
           <img className="rounded-t-lg h-[100%] " src={image} alt="" />
         </div>
       </Link>
