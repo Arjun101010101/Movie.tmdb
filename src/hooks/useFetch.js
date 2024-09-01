@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 
-const useFetch = (apiPath, queryTerm="") => {
+const useFetch = (apiPath, queryTerm = "") => {
   const [data, setData] = useState([])
-  const url = `https://api.themoviedb.org/3/${apiPath}?api_key=${process.env.React_APP_APP_KEY }&query=${queryTerm}`
+  const url = `https://api.themoviedb.org/3/${apiPath}?api_key=${process.env.React_APP_APP_KEY}&query=${queryTerm}`
   useEffect(() => {
     async function fetchMovies() {
       const response = await fetch(url)
@@ -10,7 +10,7 @@ const useFetch = (apiPath, queryTerm="") => {
       setData(json.results)
     }
     fetchMovies()
-  }, [apiPath])
+  }, [apiPath, queryTerm])
   return { data }
 }
 
