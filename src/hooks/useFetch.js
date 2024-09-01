@@ -10,7 +10,7 @@ const useFetch = (apiPath, queryTerm = "") => {
       setData(json.results)
     }
     fetchMovies()
-  }, [apiPath, queryTerm])
+  }, [url])
   return { data }
 }
 
